@@ -30,7 +30,7 @@ validation_generator = test_datagen.flow_from_directory(
 class myCallback(tf.keras.callbacks.Callback):
     def on_epoch_end(self, epoch, logs={}):
         if(logs.get('acc')>0.99):
-            print("\nReached 99% train accuracy, cancelling training before laptop ligths on fire")
+            print("\nReached 99% train accuracy.)
             self.model.stop_training = True
             
 callbacks = myCallback()
